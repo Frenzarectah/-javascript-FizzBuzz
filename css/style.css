@@ -49,10 +49,10 @@ body{
     background-size:cover;
 }
 .container{
-    height:100vh;
+    height:95vh;
 }   
 .textOrbitron--big{
-    font-size:15px;
+    font-size:12px;
 }
 .btn_start{
     align-self: center;
