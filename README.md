@@ -11,4 +11,6 @@ by adding some animations to the html elements and some event on click!<br>
     -BEM METHODOLOGY & REUSING POLICY<br>
  -BASIC JAVASCRIPT RULES<br>
  
+ You can see the result on https://fizzbuzz-frenz.netlify.app/ <br>
+ On your Desktop/Mobile devices!<br>
  ENJOY!
