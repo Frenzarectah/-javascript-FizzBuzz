@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 body{
+    width:100%;
+    height:100%;
     display:flex;
     justify-content: center;
     align-items:center;
@@ -9,21 +11,26 @@ body{
 .listing{
     justify-content:flex-start !important;
     align-items:flex-start !important;
-    flex-wrap:wrap;
 }
 .container{
-    margin-top:70px;
     display:flex;
     flex-direction: column;
+    align-items:center;
+    height:98vh;
+    flex-wrap:wrap;
+}
+.container>span{
+    margin:5px;
 }
 .textOrbitron{
     font-family: 'Orbitron';
 }
-    .textOrbitron--25{
+    .textOrbitron--big{
         font-size:25px;
     }
 .btn_start{
     border:none;
+    margin-top:300px;
     font-size:25px;
     transition-property: font-size;
     transition-duration:1s;
@@ -35,4 +42,19 @@ body{
 .span{
     width:150px;
     border:1px black solid;
+}
+@media only screen and (min-width:250px) and (max-width:600px){
+body{
+    background-image:url('../img/backgrnd_mobile.jpg');
+    background-size:cover;
+}
+.container{
+    height:80vh;
+}   
+.textOrbitron--big{
+    font-size:30px;
+}
+.btn_start{
+    align-self: center;
+}
 }
