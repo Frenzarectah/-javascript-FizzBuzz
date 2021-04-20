@@ -7,7 +7,8 @@ appending = (thing) =>{                                         //la funzione ap
 fizzbuzz = () =>{
     var btn = document.getElementById("start");                 // btn fa riferimento all'id start (quindi il bottone di avvio)
     var thing;                                                  //utile sia per avviare il gioco che per eliminarlo dal dom 
-    btn.remove();                                               //una volta iniziata l'esecuzione
+    /*btn.classList.add("repos");*/
+    btn.remove();                                 //una volta iniziata l'esecuzione
     var body = document.getElementsByTagName("body");
     body[0].classList.add("listing");
         for(i=1;i<=100;i++){
@@ -17,5 +18,6 @@ fizzbuzz = () =>{
             else thing = i;                                     //per i multipli di 5 sarà buzz e i multipli di entrambi fizzbuzz
             appending(thing);                                   //altrimenti il gioco prevede la stampa del numero in se, quindi semplicemente
         }                                                       //il valore di i in quel momento.
+    setTimeout(function(){ window.location.reload();}, 10000);  // aggiunta di un timer interno di 10 secondi dopo il quale si resetta lo schermo 
 }
 
