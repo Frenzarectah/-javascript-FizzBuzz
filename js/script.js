@@ -18,7 +18,7 @@ var fizzbuzz = (array) =>{
     setTimeout(function(){ window.location.reload();}, 10000);   
 }
 
-var acquireInput = () =>{
+var acquireInput = () =>{                   /*script di input prova 1 */
     var array = [];
     array[0] = prompt("inserisci limite minimo");
     array[1] = prompt("inserisci limite massimo");
@@ -26,4 +26,8 @@ var acquireInput = () =>{
     array[3] = prompt("scegli il secondo divisore");
     console.log(array);
     return array;
+}
+
+var popup = () =>{
+    
 }
