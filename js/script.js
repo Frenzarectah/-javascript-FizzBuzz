@@ -17,17 +17,11 @@ var fizzbuzz = (array) =>{
         }                                                      
     setTimeout(function(){ window.location.reload();}, 10000);   
 }
-
-var acquireInput = () =>{                   /*script di input prova 1 */
-    var array = [];
-    array[0] = prompt("inserisci limite minimo");
-    array[1] = prompt("inserisci limite massimo");
-    array[2] = prompt("scegli il primo divisore");
-    array[3] = prompt("scegli il secondo divisore");
-    console.log(array);
-    return array;
-}
-var pulisci = () =>{
-var textfield = document.getElementsByClassName("text");
-textfield.value="";
+var checkForm = () =>{
+    var fields = document.getElementsByTagName("input");
+    var min = fields.getElementsByClassName("min");
+    var max = fields.getElementsByClassName("max");
+    var div1 = fields.getElementsByClassName("div1");
+    var div2 = fields.getElementsByClassName("div2");
+    var 
 }

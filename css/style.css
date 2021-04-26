@@ -9,9 +9,6 @@ body{
     background-image: url('../img/backgrnd.jpg');
     background-size: cover;
 }
-.sfoca{
-    filter:blur(10px);
-}
 .listing{
     justify-content:flex-start !important;
     align-items:flex-start !important;
@@ -25,6 +22,9 @@ body{
 }
 .container>span{
     margin:5px;
+}
+.text--white{
+    color:white;
 }
 .textOrbitron{
     font-family: 'Orbitron';
@@ -49,7 +49,7 @@ body{
 }
 .window{
     width:60%;
-    height:50%;
+    height:auto;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -62,9 +62,13 @@ body{
     padding:5% 5% 5% 5%;
     display:flex;
     flex-direction: column;
-    align-items: center;
+    justify-content:center;
+    align-items:center;
     width:100%;
     flex-wrap: wrap;
+}
+.text_container{
+    flex-direction:row;
 }
 .title{
     background-image:linear-gradient(to right,blue,white);
@@ -76,6 +80,9 @@ input{
     margin:10px;
     border:2px black dotted;
     border-radius:5%;
+}
+input:invalid{
+    background-color:red;
 }
 @media only screen and (min-width:250px) and (max-width:600px){
 body{
@@ -91,5 +98,9 @@ body{
 }
 .btn_start{
     align-self: center;
+}
+.text_container{
+    flex-direction:column;
+    text-align: center;
 }
 }
