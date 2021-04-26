@@ -5,23 +5,23 @@ var appending = (thing) =>{                                         //la funzion
     root[0].appendChild(span);                                  
 }
 var fizzbuzz = (array) =>{
-    var btn = document.getElementById("start");                                                                    
-    btn.remove();                                 
+    var win = document.getElementsByClassName("window")[0];
+    win.style.display = "none";
+    var min = document.getElementsByClassName("min")[0].value;
+    var max = document.getElementsByClassName("max")[0].value;
+    var div1 = document.getElementsByClassName("div1")[0].value;
+    var div2 = document.getElementsByClassName("div2")[0].value;
+    var word1 = document.getElementsByClassName("word1")[0].value;
+    var word2 = document.getElementsByClassName("word2")[0].value;
+    var btn = document.getElementById("start");      
+    console.log(min);                                                                                              
     var body = document.getElementsByTagName("body");
     body[0].classList.add("listing");
-        for(i=array[0];i<=array[1];i++){
-            if ((i%array[2]==0)&&(i%array[3]==0)) appending("fizzbuzz");          
-            else if (i%array[2]==0) appending("fizz");                    
-            else if (i%array[3]==0) appending("buzz");                     
+        for(i=min;i<=max;i++){
+            if ((i%div1==0)&&(i%div2==0)) appending(word1.concat(word2));          
+            else if (i%div1==0) appending(word1);                    
+            else if (i%div2==0) appending(word2);                     
             else appending(i);                                                                      
         }                                                      
     setTimeout(function(){ window.location.reload();}, 10000);   
-}
-var checkForm = () =>{
-    var fields = document.getElementsByTagName("input");
-    var min = fields.getElementsByClassName("min");
-    var max = fields.getElementsByClassName("max");
-    var div1 = fields.getElementsByClassName("div1");
-    var div2 = fields.getElementsByClassName("div2");
-    var 
 }

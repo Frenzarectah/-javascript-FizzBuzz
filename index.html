@@ -5,9 +5,28 @@
         <meta name="viewport" content="width=device-width">
         <script language="JavaScript" type="text/javascript" src="js/script.js"></script>
     </head>
-    <body class="sfoca">
+    <body>
         <div class="container textOrbitron textOrbitron--big">
-            <input id="start" type="button" class="btn_start textOrbitron" value="[start!]" onclick="fizzbuzz(acquireInput());">
+            <div class="window">
+                <div class="title text--white">Insert parameters</div>
+                <div class="box_container textOrbitron">
+                <div style="text-align:center">Benvenuto a FizzBuzz modded Version !</div><br>
+                <div style="text-align:center">Questa versione ti permette di scegliere l'intervallo di gioco, i multipli e
+                anche come questi verranno chiamati all'interno della lista!</div>
+                <div style="text-align:center">HAVE FUN!</div>
+                <br><br>
+                <div class="text_container"><input type="text" class="min" placeholder="Inserisci # da dove partire" pattern="\d">
+                                            <input type="text" class="max" placeholder="Inserisci # fine intervallo" pattern="\d{2,}">
+                </div>
+                <div class="text_container"><input type="text" class="div1" placeholder="Inserisci il 1° multiplo" pattern="\d">
+                                            <input type="text" class="div2" placeholder="Inserisci 2° multiplo" pattern="\d">
+                </div>
+                <div class="text_container"><input type="text" class="word1" placeholder="Inserisci parola da associare al 1° multiplo" pattern="\w{2,5}">
+                                            <input type="text" class="word2" placeholder="Inserisci parola da associare al 2° multiplo" pattern="\w{2,5}">
+                </div>    
+                <input type="button" value="GIOCA!" onclick="fizzbuzz();">
+            </div>
+            </div>
         </div>
     </body>
 </html>
