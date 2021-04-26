@@ -27,7 +27,7 @@ var acquireInput = () =>{                   /*script di input prova 1 */
     console.log(array);
     return array;
 }
-
-var popup = () =>{
-    
+var pulisci = () =>{
+var textfield = document.getElementsByClassName("text");
+textfield.value="";
 }
