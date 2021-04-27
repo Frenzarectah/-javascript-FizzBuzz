@@ -4,7 +4,7 @@ var appending = (thing) =>{                                         //la funzion
     span.innerHTML = thing;                                     //In questo modo si rende piu' snello e capibile il codice,
     root[0].appendChild(span);                                  
 }
-var fizzbuzz = (array) =>{
+var fizzbuzz = () =>{
     var win = document.getElementsByClassName("window")[0];
     win.style.display = "none";
     var min = document.getElementsByClassName("min")[0].value;

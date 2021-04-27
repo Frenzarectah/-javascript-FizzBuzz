@@ -24,6 +24,7 @@ body{
     margin:5px;
 }
 .text--white{
+    font-family:sans-serif;
     color:white;
 }
 .textOrbitron{
@@ -53,7 +54,7 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color:#fff;
+    background-color:lightgray;
     border:1px black solid;
     z-index:40;
     box-shadow:10px 10px 5px grey;
@@ -78,7 +79,7 @@ body{
 }
 input{
     margin:10px;
-    border:2px black dotted;
+    border:1px black solid;
     border-radius:5%;
 }
 input:invalid{
