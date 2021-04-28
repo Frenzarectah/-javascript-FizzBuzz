@@ -45,4 +45,8 @@ var fizzbuzz = (result) =>{
         }                                                      
     setTimeout(function(){ window.location.reload();}, 10000);   
 }
-module.exports = fizzbuzz;
+var somma = (a,b) =>{
+    return a+b;
+}
+
+module.exports = somma;
