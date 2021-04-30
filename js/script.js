@@ -4,6 +4,12 @@ var appending = (thing) =>{                                         //la funzion
     span.innerHTML = thing;                                     //In questo modo si rende piu' snello e capibile il codice,
     root[0].appendChild(span);                                  
 }
+var notnull = (x) =>{
+    if (x !== "null") return true;
+}
+var is_NaN = (x) =>{
+    if (isNaN(x))  return true;
+}
 var submit = () =>{
     var passed = true;
     var min = document.getElementsByClassName("min")[0].value;
@@ -49,4 +55,4 @@ var somma = (a,b) =>{
     return a+b;
 }
 
-module.exports = somma;
+module.exports = somma,notnull,is_NaN;
