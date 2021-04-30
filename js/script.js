@@ -12,29 +12,28 @@ var is_NaN = (x) =>{
 }
 var submit = () =>{
     var passed = true;
-    var min = document.getElementsByClassName("min")[0].value;
-    var max = document.getElementsByClassName("max")[0].value;
-    var div1 = document.getElementsByClassName("div1")[0].value;
-    var div2 = document.getElementsByClassName("div2")[0].value;
-    var word1 = document.getElementsByClassName("word1")[0].value;
-    var word2 = document.getElementsByClassName("word2")[0].value;
-    if ((min!="null")&&(max!="null")){
-            if(max < min){ passed = false;
-                           alert("il primo parametro non può essere inferiore al secondo!");
-                           }
+    var error ="Il form presenta i seguenti errori:\n";
+    var result= [];
+    result[0] = document.getElementsByClassName("min")[0].value;
+    result[1] = document.getElementsByClassName("max")[0].value;
+    result[2] = document.getElementsByClassName("div1")[0].value;
+    result[3] = document.getElementsByClassName("div2")[0].value;
+    result[4] = document.getElementsByClassName("word1")[0].value;
+    result[5] = document.getElementsByClassName("word2")[0].value;
+    console.log(result);
+    for(i=0;i<=result.length-1;i++){
+            console.log(result[i]);
+        if (empty(result[i]) === true){ 
+            passed = false; 
+            error += "il "+(i+1)+"° campo è vuoto\n";
+        }else if (isNaN(result[i])&&(i!==4)&&(i!==5)){
+            passed = false;
+            error +="il"+(i+1)+"° campo non è un numero\n";
+        }
+    }    
+        if (passed === true) fizzbuzz(result);
+        else alert(error);
     }
-     if (min.isNaN == true){ passed = false;
-                             alert("il primo parametro dev'essere un numero!");
-                            }
-     if (max.isNaN == true){ passed = false;
-                             alert("il secondo parametro dev'essere un numero!");
-                            }
-    if (passed == false) alert("ci sono degli errori!");
-    else{ 
-        result = [min,max,div1,div2,word1,word2];
-        fizzbuzz(result);
-    }
-}
 
 var fizzbuzz = (result) =>{
     var win = document.getElementsByClassName("window")[0];
@@ -49,10 +48,12 @@ var fizzbuzz = (result) =>{
             else if (i%result[3]==0) appending(result[5]);                     
             else appending(i);                                                                      
         }                                                      
-    setTimeout(function(){ window.location.reload();}, 10000);   
+    //setTimeout(function(){ window.location.reload();}, 10000);   
 }
-var somma = (a,b) =>{
-    return a+b;
+/**FUNCTION PROVIDED WITH TEST UNIT */
+var empty = (x) =>{
+    if ((x === null) || (x === undefined)|| (x ==="")) return true;
+    else return false;
 }
 
-module.exports = somma,notnull,is_NaN;
+module.exports = {empty};
