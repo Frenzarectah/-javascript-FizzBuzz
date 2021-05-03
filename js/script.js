@@ -58,4 +58,4 @@ var submit = (result) =>{
         }
     }
 
-module.exports = {empty,submit};
+//module.exports = {empty,submit};
