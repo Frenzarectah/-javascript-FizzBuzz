@@ -18,9 +18,10 @@ var createWord = (result,x) =>{
         else if (x%result[3]===0) return result[5];                     
         else return x;
 };
+var createLoop = (result) =>{
+    for(i=result[0];i<=result[1];i++){
+        console.log(createWord(result,i));
+    }
+}
     
-
-
-
-
 module.exports={empty,createWord}
