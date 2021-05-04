@@ -15,7 +15,6 @@ var extractForm = () =>{
     return result;
 }
 
-
 var fizzbuzz = (result) =>{
     var win = document.getElementsByClassName("window")[0];
     win.style.display = "none";
