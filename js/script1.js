@@ -66,6 +66,7 @@ var createLoop = (result) =>{
             appending(createWord(result,i));
         }
     }else alert(checkForm(result));
+    setTimeout(function(){ window.location.reload();}, 10000);
 }
 
 module.exports={empty,createWord,checkForm};
