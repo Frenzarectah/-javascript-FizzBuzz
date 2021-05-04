@@ -1,23 +1,61 @@
-appending = (thing) =>{                                         //la funzione appending si occupa di costruire l'elemento
-    root = document.getElementsByClassName("container");        //span in base alla variabile thing, che conterrà la stringa
-    var span = document.createElement("span");                  //elaborata dagli if presenti nella funzione principale fizzbuzz.
-    span.innerHTML = thing;                                     //In questo modo si rende piu' snello e capibile il codice,
-    root[0].appendChild(span);                                  //soprattutto all'interno del ciclo for
+var appending = (thing) =>{                                         
+    root = document.getElementsByClassName("container");        
+    var span = document.createElement("span");                  
+    span.innerHTML = thing;                                     
+    root[0].appendChild(span);                                  
 }
-fizzbuzz = () =>{
-    var btn = document.getElementById("start");                 // btn fa riferimento all'id start (quindi il bottone di avvio)
-    var thing;                                                  //utile sia per avviare il gioco che per eliminarlo dal dom 
-    /*btn.classList.add("repos");*/
-    btn.remove();                                 //una volta iniziata l'esecuzione
-    var body = document.getElementsByTagName("body");
-    body[0].classList.add("listing");
-        for(i=1;i<=100;i++){
-            if ((i%3==0)&&(i%5==0)) thing ="fizzbuzz";          //un for che va da 0 a 100, l'indice fa da riferimento anche per
-            else if (i%3==0) thing = "fizz";                    //elaborare correttamente il risultato, se l'indice (i) è divisibile
-            else if (i%5==0) thing ="buzz";                     //per 3, la stringa da dare in pasto alla funzione appending sarà fizz
-            else thing = i;                                     //per i multipli di 5 sarà buzz e i multipli di entrambi fizzbuzz
-            appending(thing);                                   //altrimenti il gioco prevede la stampa del numero in se, quindi semplicemente
-        }                                                       //il valore di i in quel momento.
-    setTimeout(function(){ window.location.reload();}, 10000);  // aggiunta di un timer interno di 10 secondi dopo il quale si resetta lo schermo 
+var extractForm = () =>{
+    var result= [];
+    result[0] = document.getElementsByClassName("min")[0].value;
+    result[1] = document.getElementsByClassName("max")[0].value;
+    result[2] = document.getElementsByClassName("div1")[0].value;
+    result[3] = document.getElementsByClassName("div2")[0].value;
+    result[4] = document.getElementsByClassName("word1")[0].value;
+    result[5] = document.getElementsByClassName("word2")[0].value;
+    return result;
 }
 
+
+var fizzbuzz = (result) =>{
+    var win = document.getElementsByClassName("window")[0];
+    win.style.display = "none";
+    var btn = document.getElementById("start");      
+    console.log(result[0]);                                                                                              
+    var body = document.getElementsByTagName("body");
+    body[0].classList.add("listing");
+        for(i=result[0];i<=result[1];i++){
+            if ((i%result[2]==0)&&(i%result[3]==0)) appending(result[4].concat(result[5]));          
+            else if (i%result[2]==0) appending(result[4]);                    
+            else if (i%result[3]==0) appending(result[5]);                     
+            else appending(i);                                                                      
+        }                                                      
+    //setTimeout(function(){ window.location.reload();}, 10000);   
+}
+/**FUNCTION PROVIDED WITH TEST UNIT */
+var empty = (x) =>{
+    if ((x === null) || (x === undefined)|| (x ==="")) return true;
+    else return false;
+}
+var submit = (result) =>{
+    var passed = true;
+    var error ="Il form presenta i seguenti errori:\n";
+    console.log(result);
+    for(i=0;i<=result.length-1;i++){
+        if (empty(result[i]) === true){ 
+            passed = false; 
+            error += "il "+(i+1)+"° campo è vuoto\n";
+        }else if (isNaN(result[i])&&(i!==4)&&(i!==5)){
+            passed = false;
+            error +="il"+(i+1)+" ° campo non è un numero\n";
+        }
+    }    
+        if (passed === true){ 
+            fizzbuzz(result);
+            return passed;
+        } else{ 
+            alert(error);
+            return passed;
+        }
+    }
+
+//module.exports = {empty,submit};
