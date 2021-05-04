@@ -41,9 +41,9 @@ body{
     transition-duration:1s;
     background-color:transparent;
 }
-.btn_start:hover{
-    font-size:28px;
-}
+    .btn_start:hover{
+        font-size:28px;
+    }
 .span{
     width:150px;
     border:1px black solid;
@@ -80,11 +80,12 @@ body{
 input{
     margin:10px;
     border:1px black solid;
+    background-color:white;
     border-radius:5%;
 }
-input:invalid{
-    background-color:red;
-}
+    input:invalid{
+        background-color:yellow;
+    }
 @media only screen and (min-width:250px) and (max-width:600px){
 body{
     background-image:url('../img/backgrnd_mobile.jpg');

@@ -46,7 +46,7 @@ var submit = (result) =>{
             error += "il "+(i+1)+"° campo è vuoto\n";
         }else if (isNaN(result[i])&&(i!==4)&&(i!==5)){
             passed = false;
-            error +="il"+(i+1)+"° campo non è un numero\n";
+            error +="il"+(i+1)+" ° campo non è un numero\n";
         }
     }    
         if (passed === true){ 
