@@ -16,6 +16,6 @@ via a starting form, with compiling controls.
  - CSS<br>
     - BEM METHODOLOGY & REUSING POLICY<br>
  - BASIC JAVASCRIPT RULES<br>
- - <b>ADDING JEST FOR TESTING FUNCTIONS (work in progress)</b>
+ - <b>ADDED TEST SUITE FOR FUNCTIONS (USING #JEST)</b>
  
  ENJOY!
