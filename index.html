@@ -16,14 +16,14 @@
                 anche come questi verranno chiamati all'interno della lista!</div>
                 <div style="text-align:center">HAVE FUN!</div>
                 <br><br>
-                <div class="text_container"><input type="text" class="min" placeholder="Inserisci # da dove partire" pattern="\d" /required>
-                                            <input type="text" class="max" placeholder="Inserisci # fine intervallo" pattern="\d{2,}" /required>
+                <div class="text_container"><input type="text" class="min" placeholder="Inserisci # da dove partire" pattern="\d{1,}">
+                                            <input type="text" class="max" placeholder="Inserisci # fine intervallo" pattern="\d{1,}">
                 </div>
-                <div class="text_container"><input type="text" class="div1" placeholder="Inserisci il 1° multiplo" pattern="\d" /required>
-                                            <input type="text" class="div2" placeholder="Inserisci 2° multiplo" pattern="\d" /required> 
+                <div class="text_container"><input type="text" class="div1" placeholder="Inserisci il 1° multiplo" pattern="\d{1,}">
+                                            <input type="text" class="div2" placeholder="Inserisci il 2° multiplo" pattern="\d{1,}"> 
                 </div>
-                <div class="text_container"><input type="text" class="word1" placeholder="Inserisci parola/numero da associare al 1° multiplo" pattern="[a-zA-Z0-9].{2,5}" /required>
-                                            <input type="text" class="word2" placeholder="Inserisci parola/numero da associare al 2° multiplo" pattern="[a-zA-Z0-9].{2,5}" /required>
+                <div class="text_container"><input type="text" class="word1" placeholder="Inserisci parola/numero da associare al 1° multiplo" pattern="[a-zA-Z0-9].{1,5}">
+                                            <input type="text" class="word2" placeholder="Inserisci parola/numero da associare al 2° multiplo" pattern="[a-zA-Z0-9].{1,5}">
                 </div>    
                 <input type="button" value="GIOCA!" onclick="createLoop(extractForm());">
             </div>

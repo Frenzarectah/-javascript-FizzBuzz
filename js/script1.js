@@ -6,10 +6,10 @@ var empty = (x) =>{
 /**funzione atta unicamente a estrapolare dati dal form e inserili in un array che poi viene restituito in output */
 var extractForm = () =>{                                                
     var result= [];                                                      
-    result[0] = document.getElementsByClassName("min")[0].value;
-    result[1] = document.getElementsByClassName("max")[0].value;
-    result[2] = document.getElementsByClassName("div1")[0].value;
-    result[3] = document.getElementsByClassName("div2")[0].value;
+    result[0] = parseInt(document.getElementsByClassName("min")[0].value);
+    result[1] = parseInt(document.getElementsByClassName("max")[0].value);
+    result[2] = parseInt(document.getElementsByClassName("div1")[0].value);
+    result[3] = parseInt(document.getElementsByClassName("div2")[0].value);
     result[4] = document.getElementsByClassName("word1")[0].value;
     result[5] = document.getElementsByClassName("word2")[0].value;
     return result;
@@ -29,6 +29,10 @@ var createWord = (result,x) =>{
 var checkForm = (result) =>{
     var passed = true;
     var error ="Il form presenta i seguenti errori:\n";
+    if ((result[0] > result[1])){
+        passed = false; 
+        error +="il 1° campo non puo essere maggiore del 2°!\n";
+    }
     for(i=0;i<=result.length-1;i++){
         if (empty(result[i]) === true){ 
             passed = false; 
@@ -38,10 +42,10 @@ var checkForm = (result) =>{
             error +="il"+(i+1)+"° campo non è un numero\n";
         }
         }
-        if (result[0]>= result[1]){
+        /**if ((result[0] > result[1])){
             passed = false; 
             error +="il 1° campo non puo essere maggiore del 2°!";
-        }    
+        }*/    
     if (passed == false) return error;
     else return passed;
 }
