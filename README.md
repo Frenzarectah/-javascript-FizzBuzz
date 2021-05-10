@@ -1,4 +1,5 @@
-# FizzBuzz_JS
+# FizzBuzz_JS<br>
+Try It Here: <a href="https://fizzbuzz-frenz.netlify.app/">NETLIFY DEPLOY</a><br>
 
 The classic basic programming test, based in conditional logic and iteration.<br>
 In this case we are talking about JS, I tried to make the experience more interesting<br>
